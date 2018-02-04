@@ -20,7 +20,7 @@ window.setInterval(getPlay, 1000/100);
 function getPlay(){
 	console.log("playing");
 	var xhr = new XMLHttpRequest();
-	var url = "http://192.168.1.18/gamestate";
+	var url = "gamestate";
 	xhr.open("GET", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
 	xhr.onreadystatechange = function () {
@@ -86,7 +86,7 @@ function postPlay(dir){
 	var nplus = date2.getTime();
 	if(nplus-n > (1000/10)){
 	var xhr = new XMLHttpRequest();
-	var url = "http://192.168.1.18/update";
+	var url = "update";
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json", "Access-Control-Allow-Origin");
 	xhr.onreadystatechange = function (){
